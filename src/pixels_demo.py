@@ -4,7 +4,13 @@ from pixels import Pixels, pixels
 from alexa_led_pattern import AlexaLedPattern
 from google_home_led_pattern import GoogleHomeLedPattern
 from flask import Flask
+from flask_admin import Admin
+
 app = Flask(__name__)
+app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
+
+admin = Admin(app, name='microblog', template_mode='bootstrap3')
+
 
 @app.route('/')
 def root():

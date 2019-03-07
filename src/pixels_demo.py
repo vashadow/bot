@@ -15,7 +15,7 @@ def hello_world():
 	
 if __name__ == '__main__':
 
-    threading.Thread(target=app.run, args=(host='0.0.0.0', port=80)).start()
+    threading.Thread(target=app.run(host='0.0.0.0', port=80)).start()
 	
     pixels.pattern = GoogleHomeLedPattern(show=pixels.show)
     #pixels.pattern = AlexaLedPattern(show=pixels.show)

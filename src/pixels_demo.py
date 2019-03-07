@@ -1,4 +1,5 @@
 import time
+from threading import Thread
 from pixels import Pixels, pixels
 from alexa_led_pattern import AlexaLedPattern
 from google_home_led_pattern import GoogleHomeLedPattern
@@ -9,12 +10,20 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
-
+	
+def webserver():
+    app.run(host='0.0.0.0', port=80)
+	
+	
+Thread(target=webserver)
+	
+	
 if __name__ == '__main__':
 
-    app.run(host='0.0.0.0', port=80)
-    pixels.pattern = GoogleHomeLedPattern(show=pixels.show)
-
+    
+    #pixels.pattern = GoogleHomeLedPattern(show=pixels.show)
+    pixels.pattern = AlexaLedPattern(show=pixels.show)
+	
     while True:
 
         try:

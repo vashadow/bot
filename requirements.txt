@@ -2,10 +2,10 @@ Flask==0.12.3
 gpiozero
 Adafruit-GPIO
 numpy
-scipy
-matplotlib
-ipython
-jupyter
-pandas
-sympy
-nose
+#scipy
+#matplotlib
+#ipython
+#jupyter
+#pandas
+#sympy
+#nose

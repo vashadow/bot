@@ -1,5 +1,5 @@
 import time
-import thread
+import threading
 from pixels import Pixels, pixels
 from alexa_led_pattern import AlexaLedPattern
 from google_home_led_pattern import GoogleHomeLedPattern
@@ -16,7 +16,7 @@ def flaskThread():
 	
 if __name__ == '__main__':
 
-    thread.start_new_thread(flaskThread,())
+    threading.Thread(flaskThread,()).start()
 	
     pixels.pattern = GoogleHomeLedPattern(show=pixels.show)
     #pixels.pattern = AlexaLedPattern(show=pixels.show)

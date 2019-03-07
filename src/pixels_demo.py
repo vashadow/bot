@@ -1,5 +1,5 @@
 import time
-from threading import Thread
+import threading
 from pixels import Pixels, pixels
 from alexa_led_pattern import AlexaLedPattern
 from google_home_led_pattern import GoogleHomeLedPattern

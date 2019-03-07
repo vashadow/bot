@@ -9,6 +9,6 @@ numpy
 #pandas
 #sympy
 #nose
-RPi
+RPi.GPIO
 RPIO
 pigpio

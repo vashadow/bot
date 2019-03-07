@@ -9,9 +9,11 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 
 # install gcc
 RUN apt-get update
-RUN apt-get -y install gcc
+RUN apt-get upgrade
+RUN apt-get -y install gcc-6 g++-6
+#RUN apt-get -y install gcc
 #RUN install_packages gcc
-RUN install cross-compile
+#RUN install cross-compile
 
 
 # Set our working directory

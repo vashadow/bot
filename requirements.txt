@@ -1,4 +1,3 @@
-gcc7
 Flask==0.12.3
 spidev
 gpiozero

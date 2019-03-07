@@ -16,7 +16,7 @@ def flaskThread():
 	
 if __name__ == '__main__':
 
-    threading.Thread(flaskThread,()).start()
+    threading.Thread(target=flaskThread).start()
 	
     pixels.pattern = GoogleHomeLedPattern(show=pixels.show)
     #pixels.pattern = AlexaLedPattern(show=pixels.show)

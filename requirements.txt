@@ -1,4 +1,5 @@
-Flask==0.12.3
+Flask
+Flask-Admin
 gpiozero
 Adafruit-GPIO
 numpy
